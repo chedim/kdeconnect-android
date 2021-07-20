@@ -99,7 +99,6 @@ public class KeyListenerView extends View {
             //We don't want to swallow the back button press
             return false;
         }
-
         // NOTE: Most keyboards, and specifically the Android default keyboard when
         // entering non-ascii characters, will not trigger KeyEvent events as documented
         // here: http://developer.android.com/reference/android/view/KeyEvent.html
@@ -124,6 +123,7 @@ public class KeyListenerView extends View {
 
         if (event.isShiftPressed()) {
             np.set("shift", true);
+            modifier = true;
         }
 
         if (event.isMetaPressed()) {
